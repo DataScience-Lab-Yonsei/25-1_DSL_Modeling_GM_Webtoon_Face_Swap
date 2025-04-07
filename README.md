@@ -1,12 +1,11 @@
 # 25-1_DSL_Modeling_GM_Webtoon_Face_Swap
 
-웹툰 남주가 토르라면!  
-DSL 25-1 모델링 프로젝트 2위에 빛나는 바로 그 프로젝트 😎
+![cover](images/cover.png)DSL 25-1 모델링 프로젝트 2위에 빛나는 바로 그 프로젝트 😎
 모두를 웃게 만든 바로 그 프로젝트 😎
 여러분도 따라하고 싶으신가요?  
 잘 찾아오셨습니다!  
 순서대로 따라오시면, 그 어떤 웹툰도 여러분의 마음대로 주인공의 얼굴을 원하는 사람의 얼굴로 바꿔치기할 수 있습니다! 
-
+![result](images/1.png)
 # Webtoon Face Transformation Pipeline
 
 ## Introduction
@@ -14,21 +13,26 @@ DSL 25-1 모델링 프로젝트 2위에 빛나는 바로 그 프로젝트 😎
 본 프로젝트는 네이버 웹툰 **'국세청 망나니'** 의 주인공 **'신재현'** 의 얼굴을 사용자가 선택한 다른 얼굴(예: 크리스 햄스워스)로 자연스럽게 교체하는 생성모델 기반 이미지 변환 파이프라인입니다.
 
 본 파이프라인은 다음의 과정을 포함합니다:
-
+![pipeline](images/2.png)
 ## Pipeline Overview
 
 1. **Data Collection & Preprocessing**
    - 웹툰 이미지 수집 후, 얼굴 영역 크롭 및 고화질 필터링
 2. **Face Classification**
    - CLIP + Logistic Regression으로 초기 필터링 후, VGG19 모델로 주인공 얼굴 분류
+      ![vgg19](images/3.png)
 3. **Style Transfer**
    - JoJoGAN으로 원본 얼굴의 Identity를 유지하며 스타일 전이
+     ![jojogan](images/4.png)
 4. **Face Swap**
    - Facial Landmark를 기반으로 자연스러운 얼굴 교체
+     ![faceswap](images/5.png)
 5. **Face Inpainting**
    - 경계 복원 및 자연스러운 이미지 완성
+     ![inpainting](images/6.png)
 6. **OCR-based Name Replacement**
    - 주인공 이름을 선택한 이름으로 교체
+     ![ocr](images/7.png)
 
 
 ## Important Notes
