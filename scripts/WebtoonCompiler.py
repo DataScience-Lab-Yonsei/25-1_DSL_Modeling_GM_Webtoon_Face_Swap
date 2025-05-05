@@ -1,3 +1,3 @@
 """
-We are limiting this python script from public access due to copyright concerns
+We are limiting access to this python script due to copyright concerns
 """
